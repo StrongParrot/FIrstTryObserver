@@ -1,17 +1,22 @@
 import java.util.ArrayList;
 
 public class AirDefenseControlRoom {
-    ArrayList<Weapon> primary= new ArrayList<Weapon>();
+     ArrayList<Weapon> primary= new ArrayList<>();
 
-    public void addWeapon(Weapon aim){
-        primary.add(aim);
+    public void addWeapon(Weapon weapon){
+        primary.add(weapon);
     }
 
-    public void removeWeapon(Weapon aim){
-        primary.remove(aim);
+    public void removeWeapon(Weapon weapon){
+        primary.remove(weapon);
     }
 
     public void ALARM(){
+        for (Weapon aim:
+             primary) {
+            aim.launch();
+
+        }
 
     }
 }
